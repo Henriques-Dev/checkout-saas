@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // Rotas
-const authRoutes = require("./routes/auth.routes");
+const authRoutes = require("./routes/v1/auth.routes");
 app.use("/api/auth", authRoutes);
 
 // Rota de saúde

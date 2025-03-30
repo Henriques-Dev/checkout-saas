@@ -51,3 +51,9 @@ const logout = async (req, res) => {
   await supabase.auth.signOut();
   res.status(204).end();
 };
+
+module.exports = {
+  register,
+  login,
+  logout,
+};

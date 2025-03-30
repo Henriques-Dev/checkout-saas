@@ -1,6 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const authController = require("../../controllers/auth.controllers");
+const {
+  registerSchema,
+  loginSchema,
+} = require("../../validators/auth.validator");
 const validate = require("../../middlewares/validate");
 
 router.post("/register", validate(registerSchema), authController.register);
@@ -23,4 +27,4 @@ router.get("/session", async (req, res) => {
 // router.post("/login", validate(loginSchema), authController.login);
 // router.post("/logout", authController.logout);
 
-// module.exports = router;
+module.exports = router;
